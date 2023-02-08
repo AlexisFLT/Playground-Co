@@ -1,57 +1,66 @@
 @use "../../App";
 
-.firstSection{
-    height: 100vh;
-    background-image: linear-gradient(0deg, rgba(210,215,221,0.7063200280112045) 9%, rgba(249,249,249,1) 85%), url("../../assets/backgroundMain.jpg");
-    background-size: cover;
+.firstSection {
+  height: 100vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(210, 215, 221, 0.7063200280112045) 9%,
+      rgba(249, 249, 249, 1) 85%
+    ),
+    url("../../assets/backgroundMain.jpg");
+  background-size: cover;
 }
 
 //##########################################################//
 
-.secondSection{
-    position: relative;
-    height: 100vh;
-    background-image: linear-gradient(0deg, rgba(210,215,221,0.25) 100%, rgba(249,249,249,1) 100%), url("../../assets/backgroundNeon.jpg");
-    background-size: cover;
+.secondSection {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(210, 215, 221, 0.25) 100%,
+      rgba(249, 249, 249, 1) 100%
+    ),
+    url("../../assets/backgroundNeon.jpg");
+  background-size: cover;
 }
 
 .Nav1 {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    position: absolute;
-    animation: slide ;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  position: absolute;
+  animation: slide;
+  bottom: 0;
+  right: 35%;
+  left: 35%;
+}
+
+.slide {
+  -webkit-animation: slide 10s ease-in-out infinite both;
+  animation: slide 10s ease-in-out infinite both;
+}
+
+@-webkit-keyframes slide {
+  0% {
     bottom: 0;
-    right: 35%;
-    left: 35%;
+  }
+  50% {
+    bottom: calc(90vh - 50px);
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes slide {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: calc(90vh - 50px);
+  }
+  100% {
+    bottom: 0;
+  }
 }
 
-.slide{
-	-webkit-animation: slide 10s ease-in-out infinite both;
-	        animation: slide 10s ease-in-out infinite both;
-}
-
-@-webkit-keyframes slide{
-    0% {
-        bottom: 0;
-      }
-      50% {
-        bottom: calc(90vh - 50px);
-      }
-      100% {
-        bottom: 0;
-      }
-  }
-  @keyframes slide {
-    0% {
-        bottom: 0;
-      }
-      50% {
-        bottom: calc(90vh - 50px);
-      }
-      100% {
-        bottom: 0;
-      }
-  }
-
-  //##########################################################//
-  
+//##########################################################//
