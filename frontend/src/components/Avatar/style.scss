@@ -1,0 +1,82 @@
+@use "../../App";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Righteous&family=Yellowtail&family=Yesteryear&display=swap');
+
+.personCircle, .personAvatar{
+    max-width: 100%;
+    display: block;
+}
+
+.avatar{
+    position: relative;
+    max-width: 15rem;
+    margin-inline: auto;
+}
+
+.personContainer{
+    aspect-ratio: 1 / 1.5;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transform: scale(0.48);
+    transition: transform 350ms ease;
+}
+
+.personContainer:hover{
+    transform: scale(0.54);
+}
+
+.personCircle{
+    position: absolute;
+    inset: auto 0 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin-inline: auto;
+    object-fit: cover;
+}
+
+.personAvatar{
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    margin-inline: auto;  
+    transform: scale(1.4); 
+    transition: transform 350ms ease;
+}
+
+.personContainer:hover .personAvatar{
+    transform: 
+        scale(1.4)
+        translateY(-1.5rem);
+}
+
+.myIdentity{
+    margin-top: -5%;
+}
+
+.divider {
+  background-color: #ca6060;
+  height: 2px;
+  width: 160px;
+  margin-inline: auto;
+}
+
+.myName {
+  color: #404245;
+  font-size: 1.5em;
+  font-weight: 900;
+  margin-top: 16px;
+  text-align: center;
+  font-family:'Montserrat', sans-serif;
+}
+
+.myJob {
+  color: #6e6e6e;
+  font-family:'Montserrat', sans-serif;
+  font-size: 14px;
+  margin-top: 4px;
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: 5px;
+}
