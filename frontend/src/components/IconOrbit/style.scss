@@ -1,0 +1,244 @@
+@use "../../App.scss";
+
+.bodyOrbit {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.orbit {
+  position: relative;
+  z-index: 10;
+
+  .centerIcon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 10rem;
+    border: App.$white-dark 1px solid;
+    background-color: App.$white-light;
+    border-radius: 50%;
+    transform: translate(-5rem, -5rem);
+  }
+
+  .reactIconsCenter {
+    font-size: 5rem;
+    color: App.$white-dark;
+  }
+  .reactIconsCenter {
+    font-size: 5rem;
+    color: App.$white-dark;
+  }
+  .iconsList {
+    display: grid;
+    place-items: center;
+    position: relative;
+    transform-origin: center;
+    animation: orbit 60s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+
+      & * {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  .iconsList li {
+    position: absolute;
+    width: 6rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1;
+    opacity: 0;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+
+    & > * {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      border-radius: inherit;
+      animation: orbit 60s linear reverse infinite;
+    }
+
+    .innerText {
+      font-size: 0.8rem;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      transition: opacity 500ms;
+      opacity: 0;
+    }
+
+    &:hover > .innerText {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes orbit {
+  100% {
+    rotate: 1turn;
+  }
+}
+@keyframes backwardOrbit {
+  100% {
+    rotate: -1turn;
+  }
+}
+
+@keyframes pulse {
+  100% {
+    transform: scale(1.4);
+  }
+}
+
+.rotate {
+  animation: rotation 10s infinite linear;
+}
+
+.iconsList li:first-child {
+  opacity: 1;
+  transform: translate(10rem, 0rem);
+}
+
+.iconsList li:nth-child(2) {
+  opacity: 1;
+  transform: translate(-10rem, 0rem);
+}
+
+.iconsList li:nth-child(3) {
+  opacity: 1;
+  transform: translate(0rem, 10rem);
+}
+
+.iconsList li:nth-child(4) {
+  opacity: 1;
+  transform: translate(0rem, -10rem);
+}
+
+.iconsList li:nth-child(5) {
+  opacity: 1;
+  transform: translate(7rem, -7rem);
+}
+
+.iconsList li:nth-child(6) {
+  opacity: 1;
+  transform: translate(-7rem, 7rem);
+}
+
+.iconsList li:nth-child(7) {
+  opacity: 1;
+  transform: translate(7rem, 7rem);
+}
+
+.iconsList li:nth-child(8) {
+  opacity: 1;
+  transform: translate(-7rem, -7rem);
+}
+
+// COLORS
+
+// ----- ICONS
+
+.icon1 {
+  color: App.$green-dark;
+  background-color: App.$green-light;
+}
+
+.icon2 {
+  color: App.$blue-dark;
+  background-color: App.$blue-light;
+}
+
+.icon3 {
+  color: App.$red-dark;
+  background-color: App.$red-light;
+}
+
+.icon4 {
+  color: App.$orange-dark;
+  background-color: App.$orange-light;
+}
+
+.icon5 {
+  color: App.$yellow-dark;
+  background-color: App.$yellow-light;
+}
+
+.icon6 {
+  color: App.$purple-dark;
+  background-color: App.$purple-light;
+}
+
+.icon7 {
+  color: App.$cyan-dark;
+  background-color: App.$cyan-light;
+}
+
+.icon8 {
+  color: App.$brown-dark;
+  background-color: App.$brown-light;
+}
+
+// ----- TEXT
+
+.innerText1 {
+  background-color: App.$green-dark;
+  color: App.$green-light;
+}
+
+.innerText2 {
+  background-color: App.$blue-dark;
+  color: App.$blue-light;
+}
+
+.innerText3 {
+  background-color: App.$red-dark;
+  color: App.$red-light;
+}
+
+.innerText4 {
+  background-color: App.$orange-dark;
+  color: App.$orange-light;
+}
+
+.innerText5 {
+  background-color: App.$yellow-dark;
+  color: App.$yellow-light;
+}
+
+.innerText6 {
+  background-color: App.$purple-dark;
+  color: App.$purple-light;
+}
+
+.innerText7 {
+  background-color: App.$cyan-dark;
+  color: App.$cyan-light;
+}
+
+.innerText8 {
+  background-color: App.$brown-dark;
+  color: App.$brown-light;
+}

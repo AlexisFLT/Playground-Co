@@ -64,3 +64,26 @@
 }
 
 //##########################################################//
+
+.thirdSection {
+  height: 100vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(210, 215, 221, 0.45) 9%,
+      rgba(249, 249, 249, 1) 85%
+    ),
+    url("../../assets/backgroundMain.jpg");
+  background-size: cover;
+}
+
+// .orbitBlock{
+//   display: grid;
+//   place-content: center;
+// }
+
+//##########################################################//
+
+.fourthSection {
+  height: 100vh;
+  background-color: #111111;
+}
